@@ -43,6 +43,11 @@ steps{
 bat "mvn -f Day1-BankApp/pom.xml test"
 }
 }
+stage('acceptance'){
+steps{
+input('Do you Want to proceed?')
+}
+}
 stage('deploy'){
 steps{
 echo "Deploy into tomcat"
